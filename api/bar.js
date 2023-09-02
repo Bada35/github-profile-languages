@@ -1,13 +1,13 @@
 import { createBar } from "../src/bar.js";
 
-export default async function handler(request, response) {
+export default async function handler(REQUEST, RESPONSE) {
   try {
-    response.setHeader("Content-Type", "image/svg+xml");
-    response.setHeader("Cache-Control", "max-age=3600");
-    response.send(await createBar(request.query.width));
+    RESPONSE.setHeader("Content-Type", "image/svg+xml");
+    RESPONSE.setHeader("Cache-Control", "max-age=3600");
+    RESPONSE.send(await createBar(REQUEST.query.width));
   } catch (error) {
-    response.setHeader("Content-Type", "text/plain");
-    response.setHeader("Cache-Control", "no-store");
-    response.send(error.message);
+    RESPONSE.setHeader("Content-Type", "text/plain");
+    RESPONSE.setHeader("Cache-Control", "no-store");
+    RESPONSE.send(error.message);
   }
 }

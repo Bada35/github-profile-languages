@@ -1,13 +1,13 @@
 import { createButton } from "../src/button.js";
 
-export default async function handler(request, response) {
+export default async function handler(REQUEST, RESPONSE) {
   try {
-    response.setHeader("Content-Type", "image/svg+xml");
-    response.setHeader("Cache-Control", "max-age=3600");
-    response.send(await createButton(request.query.language, request.query.theme || "dark"));
+    RESPONSE.setHeader("Content-Type", "image/svg+xml");
+    RESPONSE.setHeader("Cache-Control", "max-age=3600");
+    RESPONSE.send(await createButton(REQUEST.query.language, REQUEST.query.theme ?? "dark"));
   } catch (error) {
-    response.setHeader("Content-Type", "text/plain");
-    response.setHeader("Cache-Control", "no-store");
-    response.send(error.message);
+    RESPONSE.setHeader("Content-Type", "text/plain");
+    RESPONSE.setHeader("Cache-Control", "no-store");
+    RESPONSE.send(error.message);
   }
 }

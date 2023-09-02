@@ -1,33 +1,33 @@
 import axios from "axios";
 
 async function getSizes() {
-  let token = process.env.GLB_TOKEN;
+  const TOKEN = process.env.GPL_TOKEN;
 
-  if (!token) {
-    throw new Error("GLB_TOKEN is not defined");
+  if (TOKEN === undefined) {
+    throw new Error("GPL_TOKEN is not defined");
   }
 
-  let username = process.env.GLB_USERNAME;
+  const USERNAME = process.env.GPL_USERNAME;
 
-  if (!username) {
-    throw new Error("GLB_USERNAME is not defined");
+  if (USERNAME === undefined) {
+    throw new Error("GPL_USERNAME is not defined");
   }
 
-  let ignore = (process.env.GLB_IGNORE || "").split(",");
+  const IGNORE = (process.env.GPL_IGNORE ?? "").split(",");
   let sizes = { totalSize: 0 };
 
-  await axios({
+  const RESPONSE = await axios({
     method: "post",
     url: "https://api.github.com/graphql",
     headers: {
-      Authorization: `bearer ${token}`,
+      Authorization: `bearer ${TOKEN}`,
     },
     data: {
       query: `
         query {
-          user(login: "${username}") {
+          user(login: "${USERNAME}") {
             repositories(isFork: false, first: 100, orderBy: { direction: DESC, field: PUSHED_AT },
-                         ownerAffiliations: OWNER, privacy: PUBLIC) {
+                ownerAffiliations: OWNER, privacy: PUBLIC) {
               nodes {
                 languages(first: 10, orderBy: { direction: DESC, field: SIZE }) {
                   edges {
@@ -43,26 +43,21 @@ async function getSizes() {
         }
       `,
     },
-  }).then((response) => {
-    for (let node of response.data.data.user.repositories.nodes) {
-      for (let edge of node.languages.edges) {
-        let name = edge.node.name;
-
-        if (ignore.includes(name)) {
-          continue;
-        }
-
-        let size = edge.size;
-        sizes.totalSize += size;
-
-        if (!sizes[name]) {
-          sizes[name] = size;
-        } else {
-          sizes[name] += size;
-        }
-      }
-    }
   });
+
+  for (const NODE of RESPONSE.data.data.user.repositories.nodes) {
+    for (const EDGE of NODE.languages.edges) {
+      const NAME = EDGE.node.name;
+
+      if (IGNORE.includes(NAME)) {
+        continue;
+      }
+
+      const SIZE = EDGE.size;
+      sizes.totalSize += SIZE;
+      sizes[NAME] = (sizes[NAME] ?? 0) + SIZE;
+    }
+  }
 
   return sizes;
 }

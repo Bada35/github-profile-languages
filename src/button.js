@@ -1,50 +1,61 @@
-import { languages } from "./languages.js";
-import { themes } from "./themes.js";
+import { LANGUAGES } from "./languages.js";
+import { THEMES } from "./themes.js";
 import { getSizes } from "./sizes.js";
-import { percents } from "./percents.js";
+import { PERCENTS } from "./percents.js";
 
-async function createButton(languageName, themeName) {
-  let language = languages[languageName];
+async function createButton(LANGUAGE_NAME, THEME_NAME) {
+  const LANGUAGE = LANGUAGES[LANGUAGE_NAME];
 
-  if (!language) {
-    throw new Error(`${languageName} is not supported`);
+  if (LANGUAGE === undefined) {
+    throw new Error(`"${LANGUAGE_NAME}" is not supported`);
   }
 
-  let theme = themes[themeName.replaceAll("-", "_")];
+  const THEME = THEMES[THEME_NAME.replaceAll("-", "_")];
 
-  if (!theme) {
-    throw new Error(`${themeName} is not a theme`);
+  if (THEME === undefined) {
+    throw new Error(`"${THEME_NAME}" is not a theme`);
   }
 
-  let sizes = await getSizes();
-  let percent = `${(((sizes[languageName] || 0) * 100) / sizes.totalSize).toFixed(1)}%`;
-  let totalWidth = language.width + percents[percent] + 52;
+  const SIZES = await getSizes();
+  const PERCENT = `${(((SIZES[LANGUAGE_NAME] ?? 0) * 100) / SIZES.totalSize).toFixed(1)}%`;
+  const LANGUAGE_WIDTH = LANGUAGE.width;
+  const PERCENT_WIDTH = PERCENTS[PERCENT];
 
   return `
-    <svg width="${totalWidth}" height="28" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="${totalWidth}" height="28" rx="6" ry="6"
-            fill="${theme.border_color}"
+    <svg
+      width="${28 + LANGUAGE_WIDTH + 4 + PERCENT_WIDTH + 8 + 4}"
+      height="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="0"
+        y="0"
+        width="${28 + LANGUAGE_WIDTH + 4 + PERCENT_WIDTH + 8}"
+        height="24"
+        rx="4"
+        fill="${THEME.backgroundColor}"
       ></rect>
-      <rect x="1" y="1" width="${totalWidth - 2}" height="26" rx="5" ry="5"
-            fill="${theme.background_color}"
-      ></rect>
-      <circle cx="20" cy="14" r="4" fill="${language.color}"></circle>
-      <text x="32" y="18"
-            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica,
-                        Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'
-            "
-            font-size="12" font-weight="600" fill="${theme.language_color}"
+      <circle cx="12" cy="12" r="4" fill="${LANGUAGE.color}"></circle>
+      <text
+        x="28"
+        y="16"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, 
+                     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+        font-size="12"
+        font-weight="600"
+        fill="${THEME.languageColor}"
       >
-        ${languageName}
+        ${LANGUAGE_NAME}
       </text>
-      <text x="${language.width + 36}" y="18"
-            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica,
-                        Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'
-            "
-            font-size="12"
-            fill="${theme.percent_color}"
+      <text
+        x="${28 + LANGUAGE_WIDTH + 4}"
+        y="16"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, 
+                     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+        font-size="12"
+        fill="${THEME.percentColor}"
       >
-        ${percent}
+        ${PERCENT}
       </text>
     </svg>
   `;
