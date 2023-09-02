@@ -1,4 +1,4 @@
-# GitHub Language Buttons
+# GitHub Profile Languages
 
 ## About
 
@@ -12,19 +12,19 @@ Inspired by [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-s
 
 Light themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia)
 
-![Preview (light default)](https://github-language-buttons.vercel.app/api?language=TI%20Program&theme=light) ![Preview (light high contrast)](https://github-language-buttons.vercel.app/api?language=Java&theme=light_high_contrast) ![Preview (light Protanopia & Deuteranopia)](https://github-language-buttons.vercel.app/api?language=Processing&theme=light_colorblind) ![Preview (light Tritanopia)](https://github-language-buttons.vercel.app/api?language=Python&theme=light_tritanopia)
+![Preview (light default)](https://github-profile-languages.vercel.app/api?language=TI%20Program&theme=light) ![Preview (light high contrast)](https://github-profile-languages.vercel.app/api?language=Java&theme=light_high_contrast) ![Preview (light Protanopia & Deuteranopia)](https://github-profile-languages.vercel.app/api?language=Processing&theme=light_colorblind) ![Preview (light Tritanopia)](https://github-profile-languages.vercel.app/api?language=Python&theme=light_tritanopia)
 
 Dark themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia, dimmed)
 
-![Preview (dark default)](https://github-language-buttons.vercel.app/api?language=JavaScript) ![Preview (dark high contrast)](https://github-language-buttons.vercel.app/api?language=Batchfile&theme=dark_high_contrast) ![Preview (dark Protanopia & Deuteranopia)](https://github-language-buttons.vercel.app/api?language=VBScript&theme=dark_colorblind) ![Preview (dark Tritanopia)](https://github-language-buttons.vercel.app/api?language=PowerShell&theme=dark_tritanopia) ![Preview (dark dimmed)](https://github-language-buttons.vercel.app/api?language=AutoHotkey&theme=dark_dimmed)
+![Preview (dark default)](https://github-profile-languages.vercel.app/api?language=JavaScript) ![Preview (dark high contrast)](https://github-profile-languages.vercel.app/api?language=Batchfile&theme=dark_high_contrast) ![Preview (dark Protanopia & Deuteranopia)](https://github-profile-languages.vercel.app/api?language=VBScript&theme=dark_colorblind) ![Preview (dark Tritanopia)](https://github-profile-languages.vercel.app/api?language=PowerShell&theme=dark_tritanopia) ![Preview (dark dimmed)](https://github-profile-languages.vercel.app/api?language=AutoHotkey&theme=dark_dimmed)
 
 ### Language Bar
 
-![Preview (Language Bar)](https://github-language-buttons.vercel.app/api/bar?width=415)
+![Preview (Language Bar)](https://github-profile-languages.vercel.app/api/bar?width=415)
 
 ## How to use
 
-1. [Fork this repository](https://github.com/yehwankim23/github-language-buttons/fork)
+1. [Fork this repository](https://github.com/yehwankim23/github-profile-languages/fork)
 2. [Generate a GitHub personal access token](https://github.com/settings/tokens/new) with `public_repo` permission
 
 ![How to use (GitHub personal access token)](how-to-use-2.png)
@@ -66,43 +66,43 @@ Copy and paste the following Markdown and change `DOMAIN`, `LANGUAGE`, and `THEM
 > [Supported themes](/src/themes.js)
 
 ```md
-[![GitHub Language Button](DOMAIN/api?language=LANGUAGE&theme=THEME)](https://github.com/yehwankim23/github-language-buttons)
+[![GitHub Profile Language Button](DOMAIN/api?language=LANGUAGE&theme=THEME)](https://github.com/yehwankim23/github-profile-languages)
 ```
 
 Example
 
-- `DOMAIN` → `https://github-language-buttons.vercel.app`
+- `DOMAIN` → `https://github-profile-languages.vercel.app`
 - `LANGUAGE` → `C%2b%2b` ([Percent-encoded](#percent-encoding) "C++")
 - `THEME` → `dark`
 
 ```md
-[![GitHub Language Button](https://github-language-buttons.vercel.app/api?language=C%2b%2b&theme=dark)](https://github.com/yehwankim23/github-language-buttons)
+[![GitHub Profile Language Button](https://github-profile-languages.vercel.app/api?language=C%2b%2b&theme=dark)](https://github.com/yehwankim23/github-profile-languages)
 ```
 
 Result
 
-![GitHub Language Button](https://github-language-buttons.vercel.app/api?language=C%2b%2b)
+![GitHub Profile Language Button](https://github-profile-languages.vercel.app/api?language=C%2b%2b)
 
 ### Language Bar
 
 Copy and paste the following Markdown and change `DOMAIN` and `WIDTH`
 
 ```md
-[![GitHub Language Bar](DOMAIN/api/bar?width=WIDTH)](https://github.com/yehwankim23/github-language-buttons)
+[![GitHub Profile Language Bar](DOMAIN/api/bar?width=WIDTH)](https://github.com/yehwankim23/github-profile-languages)
 ```
 
 Example
 
-- `DOMAIN` → `https://github-language-buttons.vercel.app`
+- `DOMAIN` → `https://github-profile-languages.vercel.app`
 - `WIDTH` → `415`
 
 ```md
-[![GitHub Language Bar](https://github-language-buttons.vercel.app/api/bar?width=415)](https://github.com/yehwankim23/github-language-buttons)
+[![GitHub Profile Language Bar](https://github-profile-languages.vercel.app/api/bar?width=415)](https://github.com/yehwankim23/github-profile-languages)
 ```
 
 Result
 
-![GitHub Language Bar](https://github-language-buttons.vercel.app/api/bar?width=415)
+![GitHub Profile Language Bar](https://github-profile-languages.vercel.app/api/bar?width=415)
 
 ### Percent-encoding
 

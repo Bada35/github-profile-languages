@@ -1,21 +1,21 @@
 {
-  "name": "github-language-buttons",
+  "name": "github-profile-languages",
   "version": "1.0.0",
-  "description": "GitHub Language Buttons",
+  "description": "GitHub Profile Languages",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yehwankim23/github-language-buttons.git"
+    "url": "git+https://github.com/yehwankim23/github-profile-languages.git"
   },
   "author": "김예환 Ye-Hwan Kim (Sam)",
   "license": "AGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/yehwankim23/github-language-buttons/issues"
+    "url": "https://github.com/yehwankim23/github-profile-languages/issues"
   },
-  "homepage": "https://github.com/yehwankim23/github-language-buttons#readme",
+  "homepage": "https://github.com/yehwankim23/github-profile-languages#readme",
   "type": "module",
   "dependencies": {
     "axios": "latest"
