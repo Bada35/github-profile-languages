@@ -1,58 +1,37 @@
-let themes = {
-  light: {
-    border_color: "#d6d8db",
-    background_color: "#f6f8fa",
-    language_color: "#1F2328",
-    percent_color: "#656d76",
-  },
+const THEMES = {
+  light: { backgroundColor: "#ffffff", languageColor: "#1F2328", percentColor: "#656d76" },
   light_high_contrast: {
-    border_color: "#2f3237",
-    background_color: "#e7ecf0",
-    language_color: "#0e1116",
-    percent_color: "#0e1116",
+    backgroundColor: "#ffffff",
+    languageColor: "#0e1116",
+    percentColor: "#0e1116",
   },
   light_colorblind: {
-    border_color: "#d5d8da",
-    background_color: "#f6f8fa",
-    language_color: "#24292f",
-    percent_color: "#57606a",
+    backgroundColor: "#ffffff",
+    languageColor: "#24292f",
+    percentColor: "#57606a",
   },
   light_tritanopia: {
-    border_color: "#d5d8da",
-    background_color: "#f6f8fa",
-    language_color: "#24292f",
-    percent_color: "#57606a",
+    backgroundColor: "#ffffff",
+    languageColor: "#24292f",
+    percentColor: "#57606a",
   },
-  dark: {
-    border_color: "#363b42",
-    background_color: "#21262d",
-    language_color: "#e6edf3",
-    percent_color: "#7d8590",
-  },
-  dark_dimmed: {
-    border_color: "#474e57",
-    background_color: "#373e47",
-    language_color: "#adbac7",
-    percent_color: "#768390",
-  },
+  dark: { backgroundColor: "#0d1117", languageColor: "#e6edf3", percentColor: "#7d8590" },
+  dark_dimmed: { backgroundColor: "#22272e", languageColor: "#adbac7", percentColor: "#768390" },
   dark_high_contrast: {
-    border_color: "#7a828e",
-    background_color: "#272b33",
-    language_color: "#f0f3f6",
-    percent_color: "#f0f3f6",
+    backgroundColor: "#0a0c10",
+    languageColor: "#f0f3f6",
+    percentColor: "#f0f3f6",
   },
   dark_colorblind: {
-    border_color: "#363b42",
-    background_color: "#21262d",
-    language_color: "#c9d1d9",
-    percent_color: "#8b949e",
+    backgroundColor: "#0d1117",
+    languageColor: "#c9d1d9",
+    percentColor: "#8b949e",
   },
   dark_tritanopia: {
-    border_color: "#363b42",
-    background_color: "#21262d",
-    language_color: "#c9d1d9",
-    percent_color: "#8b949e",
+    backgroundColor: "#0d1117",
+    languageColor: "#c9d1d9",
+    percentColor: "#8b949e",
   },
 };
 
-export { themes };
+export { THEMES };

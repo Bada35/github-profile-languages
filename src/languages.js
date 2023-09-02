@@ -1,4 +1,4 @@
-let languages = {
+const LANGUAGES = {
   "1C Enterprise": { width: 71, color: "#814ccc" },
   "2-Dimensional Array": { width: 113, color: "#38761d" },
   "4D": { width: 16, color: "#004289" },
@@ -568,4 +568,4 @@ let languages = {
   xBase: { width: 33, color: "#403a40" },
 };
 
-export { languages };
+export { LANGUAGES };
