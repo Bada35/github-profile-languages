@@ -1,15 +1,15 @@
 import axios from "axios";
 
-async function getStats() {
+async function getStats(username) {
   const TOKEN = process.env.GPL_TOKEN;
 
   if (TOKEN === undefined) {
     throw new Error(`"GPL_TOKEN" is not defined`);
   }
 
-  const USERNAME = process.env.GPL_USERNAME;
+  username = username ?? process.env.GPL_USERNAME;
 
-  if (USERNAME === undefined) {
+  if (username === undefined) {
     throw new Error(`"GPL_USERNAME" is not defined`);
   }
 
@@ -22,7 +22,7 @@ async function getStats() {
     data: {
       query: `
         query {
-          user(login: "${USERNAME}") {
+          user(login: "${username}") {
             repositories(isFork: false, first: 100, orderBy: { direction: DESC, field: PUSHED_AT },
                 ownerAffiliations: OWNER, privacy: PUBLIC) {
               nodes {
