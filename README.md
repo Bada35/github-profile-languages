@@ -14,11 +14,11 @@ Inspired by [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-s
 
 ### Language Buttons
 
-Light themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia)
+Light themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia):
 
 ![Language button preview (light default)](https://github-profile-languages.vercel.app/api/button?language=TI%20Program&theme=light)![Language button preview (light high contrast)](https://github-profile-languages.vercel.app/api/button?language=Java&theme=light_high_contrast)![Language button preview (light Protanopia & Deuteranopia)](https://github-profile-languages.vercel.app/api/button?language=Processing&theme=light_colorblind)![Language button preview (light Tritanopia)](https://github-profile-languages.vercel.app/api/button?language=Python&theme=light_tritanopia)
 
-Dark themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia, dimmed)
+Dark themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia, dimmed):
 
 ![Language button preview (dark default)](https://github-profile-languages.vercel.app/api/button?language=JavaScript)![Language button preview (dark high contrast)](https://github-profile-languages.vercel.app/api/button?language=Batchfile&theme=dark_high_contrast)![Language button preview (dark Protanopia & Deuteranopia)](https://github-profile-languages.vercel.app/api/button?language=VBScript&theme=dark_colorblind)![Language button preview (dark Tritanopia)](https://github-profile-languages.vercel.app/api/button?language=PowerShell&theme=dark_tritanopia)![Language button preview (dark dimmed)](https://github-profile-languages.vercel.app/api/button?language=AutoHotkey&theme=dark_dimmed)
 
@@ -65,7 +65,7 @@ Copy and paste the following Markdown and change `DOMAIN` and `WIDTH`
 [![GitHub Profile Language Bar](DOMAIN/api/bar?width=WIDTH)](https://github.com/yehwankim23/github-profile-languages)
 ```
 
-Example
+Example:
 
 - `DOMAIN` → `https://github-profile-languages.vercel.app`
 - `WIDTH` → `415`
@@ -74,7 +74,7 @@ Example
 [![GitHub Profile Language Bar](https://github-profile-languages.vercel.app/api/bar?width=415)](https://github.com/yehwankim23/github-profile-languages)
 ```
 
-Result
+Result:
 
 ![GitHub Profile Language Bar](https://github-profile-languages.vercel.app/api/bar?width=415)
 
@@ -90,7 +90,7 @@ Copy and paste the following Markdown and change `DOMAIN`, `LANGUAGE`, and `THEM
 [![GitHub Profile Language Button](DOMAIN/api/button?language=LANGUAGE&theme=THEME)](https://github.com/yehwankim23/github-profile-languages)
 ```
 
-Example
+Example:
 
 - `DOMAIN` → `https://github-profile-languages.vercel.app`
 - `LANGUAGE` → `C%2b%2b` ([Percent-encoded](#percent-encoding) "C++")
@@ -100,7 +100,7 @@ Example
 [![GitHub Profile Language Button](https://github-profile-languages.vercel.app/api/button?language=C%2b%2b&theme=dark)](https://github.com/yehwankim23/github-profile-languages)
 ```
 
-Result
+Result:
 
 ![GitHub Profile Language Button](https://github-profile-languages.vercel.app/api/button?language=C%2b%2b)
 
@@ -108,7 +108,24 @@ Result
 
 Visit `DOMAIN/api/stats` for raw language statistics
 
+Example:
+
+- `DOMAIN` → `https://github-profile-languages.vercel.app`
+
+[https://github-profile-languages.vercel.app/api/stats](https://github-profile-languages.vercel.app/api/stats)
+
+Result:
+
 ![How to use (stats)](images/how-to-use-stats.png)
+
+Or use the `username` parameter to specify a user
+
+Example:
+
+- `DOMAIN` → `https://github-profile-languages.vercel.app`
+- `USERNAME` → `yehwankim23`
+
+[https://github-profile-languages.vercel.app/api/stats?username=yehwankim23](https://github-profile-languages.vercel.app/api/stats?username=yehwankim23)
 
 ### Percent-encoding
 
