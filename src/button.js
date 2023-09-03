@@ -4,21 +4,25 @@ import { getSizes } from "./sizes.js";
 import { PERCENTS } from "./percents.js";
 
 async function createButton(LANGUAGE_NAME, THEME_NAME) {
+  if (LANGUAGE_NAME === undefined) {
+    throw new Error(`"language" is not defined`);
+  }
+
   const LANGUAGE = LANGUAGES[LANGUAGE_NAME];
 
   if (LANGUAGE === undefined) {
-    throw new Error(`"${LANGUAGE_NAME}" is not supported`);
+    throw new Error(`"${LANGUAGE_NAME}" is not a supported language`);
   }
 
   const THEME = THEMES[THEME_NAME.replaceAll("-", "_")];
 
   if (THEME === undefined) {
-    throw new Error(`"${THEME_NAME}" is not a theme`);
+    throw new Error(`"${THEME_NAME}" is not a supported theme`);
   }
 
+  const LANGUAGE_WIDTH = LANGUAGE.width;
   const SIZES = await getSizes();
   const PERCENT = `${(((SIZES[LANGUAGE_NAME] ?? 0) * 100) / SIZES.totalSize).toFixed(1)}%`;
-  const LANGUAGE_WIDTH = LANGUAGE.width;
   const PERCENT_WIDTH = PERCENTS[PERCENT];
 
   return `

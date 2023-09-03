@@ -4,17 +4,14 @@ async function getSizes() {
   const TOKEN = process.env.GPL_TOKEN;
 
   if (TOKEN === undefined) {
-    throw new Error("GPL_TOKEN is not defined");
+    throw new Error(`"GPL_TOKEN" is not defined`);
   }
 
   const USERNAME = process.env.GPL_USERNAME;
 
   if (USERNAME === undefined) {
-    throw new Error("GPL_USERNAME is not defined");
+    throw new Error(`"GPL_USERNAME" is not defined`);
   }
-
-  const IGNORE = (process.env.GPL_IGNORE ?? "").split(",");
-  let sizes = { totalSize: 0 };
 
   const RESPONSE = await axios({
     method: "post",
@@ -44,6 +41,9 @@ async function getSizes() {
       `,
     },
   });
+
+  const IGNORE = (process.env.GPL_IGNORE ?? "").split(",");
+  let sizes = { totalSize: 0 };
 
   for (const NODE of RESPONSE.data.data.user.repositories.nodes) {
     for (const EDGE of NODE.languages.edges) {

@@ -2,6 +2,10 @@ import { getSizes } from "./sizes.js";
 import { LANGUAGES } from "./languages.js";
 
 async function createBar(BAR_WIDTH) {
+  if (BAR_WIDTH === undefined) {
+    throw new Error(`"width" is not defined`);
+  }
+
   const TOTAL_WIDTH = parseInt(BAR_WIDTH);
 
   if (TOTAL_WIDTH <= 0) {
@@ -23,7 +27,7 @@ async function createBar(BAR_WIDTH) {
     const LANGUAGE = LANGUAGES[LANGUAGE_NAME];
 
     if (LANGUAGE === undefined) {
-      throw new Error(`"${LANGUAGE_NAME}" is not supported`);
+      throw new Error(`"${LANGUAGE_NAME}" is not a supported language`);
     }
 
     const WIDTH = Math.round((TOTAL_WIDTH * SIZE) / TOTAL_SIZE);
