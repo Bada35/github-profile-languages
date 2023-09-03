@@ -16,11 +16,11 @@ Inspired by [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-s
 
 Light themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia)
 
-![Language button preview (light default)](https://github-profile-languages.vercel.app/api?language=TI%20Program&theme=light)![Language button preview (light high contrast)](https://github-profile-languages.vercel.app/api?language=Java&theme=light_high_contrast)![Language button preview (light Protanopia & Deuteranopia)](https://github-profile-languages.vercel.app/api?language=Processing&theme=light_colorblind)![Language button preview (light Tritanopia)](https://github-profile-languages.vercel.app/api?language=Python&theme=light_tritanopia)
+![Language button preview (light default)](https://github-profile-languages.vercel.app/api/button?language=TI%20Program&theme=light)![Language button preview (light high contrast)](https://github-profile-languages.vercel.app/api/button?language=Java&theme=light_high_contrast)![Language button preview (light Protanopia & Deuteranopia)](https://github-profile-languages.vercel.app/api/button?language=Processing&theme=light_colorblind)![Language button preview (light Tritanopia)](https://github-profile-languages.vercel.app/api/button?language=Python&theme=light_tritanopia)
 
 Dark themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia, dimmed)
 
-![Language button preview (dark default)](https://github-profile-languages.vercel.app/api?language=JavaScript)![Language button preview (dark high contrast)](https://github-profile-languages.vercel.app/api?language=Batchfile&theme=dark_high_contrast)![Language button preview (dark Protanopia & Deuteranopia)](https://github-profile-languages.vercel.app/api?language=VBScript&theme=dark_colorblind)![Language button preview (dark Tritanopia)](https://github-profile-languages.vercel.app/api?language=PowerShell&theme=dark_tritanopia)![Language button preview (dark dimmed)](https://github-profile-languages.vercel.app/api?language=AutoHotkey&theme=dark_dimmed)
+![Language button preview (dark default)](https://github-profile-languages.vercel.app/api/button?language=JavaScript)![Language button preview (dark high contrast)](https://github-profile-languages.vercel.app/api/button?language=Batchfile&theme=dark_high_contrast)![Language button preview (dark Protanopia & Deuteranopia)](https://github-profile-languages.vercel.app/api/button?language=VBScript&theme=dark_colorblind)![Language button preview (dark Tritanopia)](https://github-profile-languages.vercel.app/api/button?language=PowerShell&theme=dark_tritanopia)![Language button preview (dark dimmed)](https://github-profile-languages.vercel.app/api/button?language=AutoHotkey&theme=dark_dimmed)
 
 ## How to use
 
@@ -87,7 +87,7 @@ Copy and paste the following Markdown and change `DOMAIN`, `LANGUAGE`, and `THEM
 > [Supported themes](/src/themes.js)
 
 ```md
-[![GitHub Profile Language Button](DOMAIN/api?language=LANGUAGE&theme=THEME)](https://github.com/yehwankim23/github-profile-languages)
+[![GitHub Profile Language Button](DOMAIN/api/button?language=LANGUAGE&theme=THEME)](https://github.com/yehwankim23/github-profile-languages)
 ```
 
 Example
@@ -97,12 +97,12 @@ Example
 - `THEME` → `dark`
 
 ```md
-[![GitHub Profile Language Button](https://github-profile-languages.vercel.app/api?language=C%2b%2b&theme=dark)](https://github.com/yehwankim23/github-profile-languages)
+[![GitHub Profile Language Button](https://github-profile-languages.vercel.app/api/button?language=C%2b%2b&theme=dark)](https://github.com/yehwankim23/github-profile-languages)
 ```
 
 Result
 
-![GitHub Profile Language Button](https://github-profile-languages.vercel.app/api?language=C%2b%2b)
+![GitHub Profile Language Button](https://github-profile-languages.vercel.app/api/button?language=C%2b%2b)
 
 ### Language Stats
 
