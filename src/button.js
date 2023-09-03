@@ -36,7 +36,7 @@ async function createButton(LANGUAGE_NAME, THEME_NAME) {
         y="0"
         width="${28 + LANGUAGE_WIDTH + 4 + PERCENT_WIDTH + 8}"
         height="24"
-        rx="4"
+        rx="6"
         fill="${THEME.backgroundColor}"
       ></rect>
       <circle cx="12" cy="12" r="4" fill="${LANGUAGE.color}"></circle>
