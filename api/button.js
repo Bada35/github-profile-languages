@@ -54,13 +54,13 @@ export default async function handler(REQUEST, RESPONSE) {
           width="${28 + LANGUAGE_WIDTH + 4 + PERCENT_WIDTH + 8}"
           height="24"
           rx="6"
-          fill="${THEME.backgroundColor}"
+          fill="${THEME.buttonColor}"
         ></rect>
         <circle cx="12" cy="12" r="4" fill="${LANGUAGE.color}"></circle>
         <text
           x="28"
           y="16"
-          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, 
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial,
                       sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
           font-size="12"
           font-weight="600"
@@ -71,7 +71,7 @@ export default async function handler(REQUEST, RESPONSE) {
         <text
           x="${28 + LANGUAGE_WIDTH + 4}"
           y="16"
-          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, 
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial,
                       sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
           font-size="12"
           fill="${THEME.percentColor}"

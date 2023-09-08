@@ -16,7 +16,7 @@ document.body.innerHTML = `
       width="${28 + LONGEST_LANGUAGE.width + 4 + LONGEST_PERCENT.width + 8}"
       height="24"
       rx="4"
-      fill="${THEMES_DARK.backgroundColor}"
+      fill="${THEMES_DARK.buttonColor}"
     ></rect>
     <circle cx="12" cy="12" r="4" fill="${LONGEST_LANGUAGE.color}"></circle>
     <text
