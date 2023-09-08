@@ -10,9 +10,29 @@ Inspired by [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-s
 
 ### Language Bar
 
-![Language bar preview](https://github-profile-languages.vercel.app/api/bar?width=415)
+Light themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia):
 
-### Language Buttons
+![Language bar preview (light default)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=light)
+
+![Language bar preview (light high contrast)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=light-high-contrast)
+
+![Language bar preview (light Protanopia & Deuteranopia)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=light-colorblind)
+
+![Language bar preview (light Tritanopia)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=light-tritanopia)
+
+Dark themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia, dimmed):
+
+![Language bar preview (dark default)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark)
+
+![Language bar preview (dark high contrast)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark-high-contrast)
+
+![Language bar preview (dark Protanopia & Deuteranopia)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark-colorblind)
+
+![Language bar preview (dark Tritanopia)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark-tritanopia)
+
+![Language bar preview (dark dimmed)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark-dimmed)
+
+### Language Button
 
 Light themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia):
 
@@ -59,26 +79,29 @@ Dark themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia, dimm
 
 ### Language Bar
 
-Copy and paste the following Markdown and change `DOMAIN` and `WIDTH`
+Copy and paste the following Markdown and change `DOMAIN`, `WIDTH`, and `THEME`
+
+> [Supported themes](/src/themes.js)
 
 ```md
-[![GitHub Profile Language Bar](DOMAIN/api/bar?width=WIDTH)](https://github.com/yehwankim23/github-profile-languages)
+[![GitHub Profile Language Bar](DOMAIN/api/bar?width=WIDTH&theme=THEME)](https://github.com/yehwankim23/github-profile-languages)
 ```
 
 Example:
 
 - `DOMAIN` → `https://github-profile-languages.vercel.app`
-- `WIDTH` → `415`
+- `WIDTH` → `830`
+- `THEME` → `dark`
 
 ```md
-[![GitHub Profile Language Bar](https://github-profile-languages.vercel.app/api/bar?width=415)](https://github.com/yehwankim23/github-profile-languages)
+[![GitHub Profile Language Bar](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark)](https://github.com/yehwankim23/github-profile-languages)
 ```
 
 Result:
 
-![GitHub Profile Language Bar](https://github-profile-languages.vercel.app/api/bar?width=415)
+![GitHub Profile Language Bar](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark)
 
-### Language Buttons
+### Language Button
 
 Copy and paste the following Markdown and change `DOMAIN`, `LANGUAGE`, and `THEME`
 
