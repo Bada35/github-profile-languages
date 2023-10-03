@@ -16,8 +16,8 @@ export default async function handler(REQUEST, RESPONSE) {
 
     const TOTAL_WIDTH = parseInt(WIDTH);
 
-    if (TOTAL_WIDTH <= 0) {
-      throw new Error(`"${TOTAL_WIDTH}" is not a valid width`);
+    if (TOTAL_WIDTH === NaN || TOTAL_WIDTH <= 0) {
+      throw new Error(`"${WIDTH}" is not a valid width`);
     }
 
     const THEME_NAME = REQUEST.query.theme ?? "dark";
