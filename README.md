@@ -10,6 +10,14 @@ Inspired by [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-s
 
 ### Language Bar
 
+Default theme (dark):
+
+![Language bar preview (dark default)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark)
+
+<details>
+  <summary>Other themes:</summary>
+  <br />
+
 Light themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia):
 
 ![Language bar preview (light default)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=light)
@@ -20,9 +28,7 @@ Light themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia):
 
 ![Language bar preview (light Tritanopia)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=light-tritanopia)
 
-Dark themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia, dimmed):
-
-![Language bar preview (dark default)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark)
+Dark themes (high contrast, Protanopia & Deuteranopia, Tritanopia, dimmed):
 
 ![Language bar preview (dark high contrast)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark-high-contrast)
 
@@ -31,6 +37,8 @@ Dark themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia, dimm
 ![Language bar preview (dark Tritanopia)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark-tritanopia)
 
 ![Language bar preview (dark dimmed)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark-dimmed)
+
+</details>
 
 ### Language Button
 
