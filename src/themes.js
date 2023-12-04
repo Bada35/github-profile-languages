@@ -27,7 +27,7 @@ const THEMES = {
     barColor: "#171b22",
     buttonColor: "#0d1117",
     languageColor: "#e6edf3",
-    percentColor: "#7d8590",
+    percentColor: "#848d97",
   },
   dark_dimmed: {
     barColor: "#292e35",
